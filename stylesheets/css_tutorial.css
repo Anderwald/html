@@ -1,0 +1,115 @@
+/*The priority level of the selector is decided in Point of combination of selectors.
+
+style attribute = a
+number of ID attributes in the selector = b
+number of other attributes and pseudo-classes in the selector = c
+number of element names and pseudo-elements in the selector = d*/
+
+
+/*A) Simple selectors (select elements based on name, id, class)*/
+
+/*1) The "element" selector
+all <p> elements on the page will be center-aligned, with a red text color*/
+
+p {
+  text-align: center;
+  color: red;
+}
+
+/*2a) The "class" selector (.class)
+all HTML elements with class="center" will be red and center-aligned*/
+
+.center {
+  text-align: center;
+  color: yellow;
+}
+
+/*2b) The "element+class" selector (element.class)
+all <p> elements with class="center" will be red and center-aligned*/
+
+p.center {
+  text-align: center;
+  color: red;
+}
+
+/*3) The "id" selector (#id)
+the CSS rule below will be applied to the HTML element with id="fh1"*/
+
+#fh1 {
+  text-align: center;
+  color: red;
+}
+
+/*4) The "universal" selector (*)
+all HTML elements will be red and center-aligned*/
+
+* {
+  text-align: center;
+  color: red;
+}
+
+/*5) The "grouping" selector (element,element)
+all h2 and h3 elements with class="center" will be red and center-aligned*/
+
+h2, h3 {
+  text-align: center;
+  color: red;
+}
+
+/*B) Combinator selectors (select elements based on a specific relationship between them)*/
+
+/*1) The "descendant" selector (element space element)
+the following example selects all <p> elements inside <div> elements*/
+
+div p {
+  background-color: yellow;
+}
+
+/*1) The "child" selector (element > element)
+the following example selects all <p> elements that are children of a <div> element*/
+
+div > p {
+  background-color: yellow;
+}
+
+/*1) The "adjacent sibling" selector (element + element)
+all <p> elements that are placed immediately after <div> elements*/
+
+div + p {
+  background-color: yellow;
+}
+
+/*1) The "general sibling" selector (element ~ element)
+all <p> elements that are siblings of <div> elements*/
+
+div ~ p {
+  background-color: yellow;
+}
+
+/*C) Pseudo-class selectors (select elements based on a certain state - :)*/
+
+/*An example of using the :hover pseudo-class on a <div> element*/
+
+div:hover {
+  background-color: blue;
+}
+
+/*D) Pseudo-element selectors (select and style a part of an element - ::)*/
+
+/*The following example formats the first line of the text in all <p> elements*/
+
+p::first-line {
+  color: #ff0000;
+  font-variant: small-caps;
+}
+
+/*E) Attribute selectors (select and style a part of an element - [])*/
+
+/*The following example formats every input element which is of "button" type*/
+
+input[type="button"] {
+  width: 120px;
+  margin-left: 35px;
+  display: block;
+}
+
