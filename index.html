@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<!-- html (the root of an HTML document)-->
+<html lang="en">
+<!--head (container for metadata)-->
+<head>
+ <!--title (shown in the browser's title bar or in the page's tab)-->
+ <title>HTML5 template file</title>
+ <!--base (specify a default URL and a default target for all links on a page)-->
+ <base href="/anderwald/pagina/" target="_blank">
+ <!--style (used to define style information (CSS) for our document)-->
+ <style>
+ .myDiv {
+  border: 5px outset red;
+  background-color: lightblue;    
+  text-align: center;
+  }
+  h1{color: Pink;}
+  h2{color: DarkGreen;}
+  h3{color: yellow;}
+  h4{color: Indigo;}
+  h5{color: Indigo;}
+  h6{color: Indigo;}
+ </style>
+ <!--meta (describe metadata within an HTML document)-->
+ <meta name="description" content="Free Web tutorials">
+ <!--link (relationship between document and external resource, most often links to style sheets)-->
+ <link rel="stylesheet" href="styles.css">
+</head>
+<!--body (the contents of an HTML document)-->
+<body style="background-color:lightslategray">
+
+<!--HTML5 tags/elements, grouped by categories-->
+
+<h2>HTML tags/elements for forms</h2>
+
+<h3>The &ltbutton&gt element</h3>
+<button type="button" onclick="alert('Szervusz la lume!')">Click on me!</button>
+<hr>
+
+<h3>The &ltform&gt, &ltfieldset&gt, &ltlegend&gt, &ltinput&gt and &ltoutput&gt elements</h3>
+<form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+  <fieldset>
+  <legend>text text text text text</legend>
+  <input type="range" id="a" value="50">
+  +<input type="number" id="b" value="0">
+  =<output name="x" for="a b"></output>
+  </fieldset>
+</form>
+<hr>
+
+<h3>The &ltlabel&gt, &ltdatalist&gt and &ltoption&gt elements</h3>
+ <label for="browser">text text text text text:</label>
+  <input list="browsers" name="browser" id="browser">
+  <datalist id="browsers">
+    <option value="Edge">
+    <option value="Firefox">
+    <option value="Chrome">
+    <option value="Opera">
+    <option value="Safari">
+  </datalist>
+  <input  type="submit">
+<hr>
+
+<h3>The &ltselect&gt and &ltoptiongroup&gt elements</h3>  
+<label for="cars">text text text text text:</label>
+<select  name="cars" id="cars">
+  <optgroup label="Swedish Cars">
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+  </optgroup>
+  <optgroup label="German Cars">
+    <option value="mercedes">Mercedes</option>
+    <option value="audi">Audi</option>
+  </optgroup>
+</select>
+<hr>
+
+<h3>The &lttextarea&gt element</h3>
+<label for="textarea">A multi-line text input control, often used in a form, to collect user inputs...</label>
+<textarea id="textarea" name="textarea" rows="3" cols="50">
+...like comments or reviews
+</textarea>
+<hr>
+
+<h2>HTML tags/elements for links</h2>
+
+<h3>The &lta&gt element</h3>
+ <p>hyperlink to a webpage:</p><a href="https://www.fotbalfeminin.net" target="_blank">www.fotbalfeminin.net</a><br>
+ <p>hyperlink to a downloadable image:</p>
+ <a href="pozne/cover.jpg" download>
+  <img src="pozne/cover.jpg" alt="FF Baia Mare" width="150" height="150">
+ </a>
+<hr>
+
+<h3>The &ltnav&gt element</h3>
+<p>Set of navigation links:</p>
+<nav>
+<a href="/html/">HTML</a> |
+<a href="/css/">CSS</a> |
+<a href="/js/">JavaScript</a> |
+<a href="/python/">Python</a>
+</nav>
+<hr>
+
+<h2>HTML tags/elements for list</h2>
+
+<h3>The &ltul&gt, &ltli&gt and &ltdata&gt elements</h3>
+<ul>
+  <li><data value="21053">Unordered list bullet nr.1 = 21053</data></li>
+  <li><data value="21054">Unordered list bullet nr.2 = 21054</data></li>
+  <li><data value="21055">Unordered list bullet nr.3 = 21055</data></li>
+</ul>
+<hr>
+
+<h3>The &ltol&gt, &ltli&gt and &lttime&gt elements</h3>
+<ol start = "1">
+  <li><time datetime="2020-02-14 20:00">Ordered list element nr.1 = Valentines day = 2020-02-14 20:00</time></li>
+  <li><time datetime="2020-03-01 20:00">Ordered list element nr.2 = Martisor = 2020-03-01 20:00</time></li>
+  <li><time datetime="2020-08-10 20:00">Ordered list element nr.3 = FSN day = 2020-08-10 20:00</time></li>
+</ol>
+<hr>
+
+<h3>The &ltdl&gt, &ltdd&gt and &ltdt&gt elements</h3>
+<dl>
+  <dt>Description list Term1</dt>
+  <dd>Description of the Term1</dd>
+  <dt>Description list Term2</dt>
+  <dd>Description of the Term2</dd>
+</dl>
+<hr>
+
+<h3>The &ltdetails&gt and &ltsummary&gt elements</h3>
+<details open>
+  <summary>Summary</summary>
+  <p>Details that the user can open and close on demand</p>
+</details>
+<hr>
+
+<h2>HTML tags/elements for media</h2>
+
+<h3>The &ltimg&gt, &ltmap&gt and &ltarea&gt elements</h3>
+<img src="pozne/demo.png" alt="media tags" usemap="#workmap" width="150" height="150">
+<map name="workmap">
+  <area shape="rect" coords="5,5,150,50" alt="Independenta" href="http://www.fotbalfeminin.net/team/cs-as-independenta-baia-mare/" target="_blank">
+  <area shape="rect" coords="5,50,150,150" alt="Venus" href="http://www.fotbalfeminin.net/team/venus-maramures/" target="_blank">
+</map>
+<hr>
+
+<h3>The &ltaudio&gt and &ltsource&gt elements</h3>
+<audio controls>
+  <source src="audio/Jessie_Ware.mp3">
+  Your browser does not support the audio tag.
+</audio>
+<hr>
+
+<h3>The &ltembed&gt element</h3>
+<embed type="image/jpg" src="pozne/embed.png">
+<hr>
+
+<h3>The &ltfigure&gt and &ltfigcaption&gt elements</h3>
+<figure>
+  <img src="pozne/logo_baia-mare.png">
+  <figcaption>Fig.1 - Caption for the figure above</figcaption>
+</figure>
+<hr>
+
+<h3>The &ltiframe&gt element</h3>
+<p>Embed another document within the current HTML document:</p>
+<iframe src="http://www.fotbalfeminin.net" width="500" height="300"></iframe>
+<hr>
+
+<h3>The &ltmeter&gt element</h3>
+<label for="disk_d">Display a gauge, like disk usage D:</label>
+<meter id="disk_d" value="0.6">60%</meter>
+<hr>
+
+<h3>The &ltobject&gt and &ltparameter&gt elements</h3>
+<object type="audio/mpeg" data="audio/Jessie_Ware.mp3">
+<param name="autoplay" value="true">
+</object>
+<hr>
+
+<h3>The &ltpicture&gt element</h3>
+<picture>
+  <p>multiple images can be designed to more nicely fill the browser viewport</p>
+  <source srcset="logo_arf.png" media="(min-width:10px)">
+  <img src="pozne/logo_baia-mare.png" alt="default">
+</picture>
+<hr>
+
+<h3>The &ltprogress&gt element</h3>
+<label for="file">Displaying a progressbar:</label>
+<progress id="file" value="32" max="100"> 32% </progress>
+<hr>
+
+<h3>The &ltsvg&gt element</h3>
+<svg width="200" height="200">
+  <circle cx="100" cy="100" r="90" stroke="green" stroke-width="4" fill="yellow" />
+  <text fill="#000000" font-size="10" font-family="Verdana" x="20" y="100">container for SVG graphics</text>
+  Sorry, your browser does not support inline SVG.
+</svg>
+<hr>
+
+<h3>The &lttrack&gt element</h3>
+<p>Specifies text tracks for 'audio'/'video' elements.<br>
+This element is used to specify subtitles/caption files, that should be visible when the media is playing.<br>
+Tracks are formatted in WebVTT format (.vtt files).</p>
+<video width="320" height="240" controls>
+  <source src="forrest_gump.mp4" type="video/mp4">
+  <track src="fgsubtitles_en.vtt" kind="subtitles" srclang="en" label="English">
+</video>
+<hr>
+
+<h3>The &ltvideo&gt element</h3>
+<video width="320" height="240" controls>
+  <source src="movie.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+<hr>
+
+<h2>HTML tags/elements for preformatted text</h2>
+
+<h3>The &ltabbr&gt element</h3>
+<p><abbr title="Caile Ferate Romane">CFR</abbr> is the abbreviation for the 'Romanian Railways'<br>
+and it is preformatted by browsers with underline</p>
+<hr>
+
+<h3>The &ltaddress&gt element</h3>
+<address>
+Name: Robert-Jozska Anderwald<br> 
+Address: Sever Bocu Street nr.39<br> 
+(preformatted by browser with italic)
+</address>
+<hr>
+
+<h3>The &ltb&gt element</h3>
+<p><b>Preformatted text with bold fonts</b><p>
+<hr>
+
+<h3>The &ltbdi&gt element</h3>
+<p>Bi-Directional isolation, ex: <bdi>إيان</bdi>- it isolates a part of text that might be formatted in a different direction from other text outside it</p>
+<hr>
+
+<h3>The &ltbdo&gt element:</h3>
+<p>Bi-Directional override, so this text will go right-to-left: <bdo dir="rtl">pula pizda coaiele</bdo></p>
+<hr>
+
+<h3>The &ltblockquote&gt element</h3>
+<blockquote cite="http://www.fotbalfeminin.net">
+ Section that is quoted from another source.
+</blockquote>
+<hr>
+
+<h3>The &ltbr&gt element</h3>
+<p>Text with<br>line break</p>
+<hr>
+
+<h3>The &ltcite&gt element</h3>
+<p><cite>Title of a work</cite> preformatted by browser with italic</p>
+<hr>
+
+<h3>The &ltcode&gt</h3>
+<p>Define a <code>piece of computer code</code> preformatted by browser with monospace font</p>
+<hr>
+
+<h3>The &ltdel&gt element</h3>
+<p>Text that has been <del>deleted</del>from a document, preformatted by browser with strikethrough</p>
+<hr>
+
+<h3>The &ltdfn&gt element</h3>
+<p>Specifies a <dfn>term</dfn> that is going to be defined within the content, preformatted by browser with italic</p>
+<hr>
+
+<h3>The &ltdialog&gt element</h3>
+<p>This is some text.</p>
+<p>This is some text.</p>
+<dialog open>This is an open dialog window</dialog>
+<p>This is some text.</p>
+<p>This is some text.</p>
+<hr>
+
+<h3>The &ltem&gt element</h3>
+<p>Define <em>emphasized text</em>, preformatted by browser with italic</p>
+<hr>
+
+<h3>The &lth1..h6&gt elements</h3>
+<h1>Heading1</h1>
+<h2>Heading2</h2>
+<h3>Heading3</h3>
+<h4>Heading4</h4>
+<h5>Heading5</h5>
+<h6>Heading6</h6>
+<hr>
+
+<h3>The &lthr&gt element</h3>
+<p>defines a thematic break in a page and...
+<hr>
+...is most often displayed as a horizontal rule</p>
+
+<h3>The &lti&gt element</h3>
+Defines a part of text in an <p><i>alternate voice or mood</i>, preformatted by browser with italic</p>
+<hr>
+
+<h3>The &ltins&gt element</h3>
+<p>Defines a text that has been <ins>inserted</ins>, preformatted by browser with underline</p>
+<hr>
+
+<h3>The &ltkbd&gt element</h3>
+<p>Define some text as keyboard input in a document, preformatted by browser with monospace font: Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy text (Windows)</p>
+<hr>
+
+<h3>The &ltmark&gt element</h3>
+<p>Define some <mark>marked text</mark>, preformatted by browser with yellow highlight</p>
+<hr>
+
+<h3>The &ltpre&gt element</h3>
+<pre>
+Defines preformatted text, which
+is displayed in a fixed-width
+font, and it preserves
+both      spaces and
+line breaks
+</pre>
+<hr>
+
+<h3>The &ltq&gt element</h3>
+<p>The 'q' tag defines a <q>short quotation</q>, normally inserted between quotation marks.
+Tip: Use 'blockquote' for long quotations.</p>
+<hr>
+
+<h3>The &ltruby&gt, &ltrt&gt and &ltrp&gt elements</h3>
+<p>Specifies a ruby annotation, which is a small extra text, attached to the main text to indicate the pronunciation or meaning of the corresponding characters.<br>
+This kind of annotation is often used in Japanese publications. Use 'ruby' together with 'rt' and 'rp':<br>
+The 'ruby' element consists of one or more <ruby>characters <rt>ruby, when supported</rt></ruby> that needs an explanation/pronunciation,<br>
+and an 'rt' element that gives that information, and an optional 'rp' element that defines what to show for <ruby>browsers <rt><rp>(</rp>{ruby, when not supported}<rp>)</rp></rt> </ruby> that do not support ruby annotations.</p>
+<hr>
+
+<h3>The &lts&gt element</h3>
+<p><s>Mark up text that is no longer correct, and it is preformatted by browsers with strikethrough font</s></p>
+<hr>
+
+<h3>The &ltsamp&gt element</h3>
+<p>Used to define sample output from a computer program.<br>
+The content inside is displayed in the browser's default monospace font.<br>
+Like this message from my computer:</p>
+<p><samp>File not found.<br>Press F1 to continue</samp></p>
+<hr>
+
+<h3>The &ltsmall&gt element</h3>
+<p>This is some normal text.</p>
+<p><small>This is some smaller text.</small></p>
+<hr>
+<h3>The &ltstrong&gt element</h3>
+<p>Used to define text with strong importance.<br>
+The content inside is typically displayed in <strong>bold</strong><br>
+Tip: Use the 'b' tag to specify bold text without any extra importance!</p>
+<hr>
+
+<h3>The &ltsub&gt element</h3>
+<p>This text contains <sub>subscript</sub> text.</p>
+<hr>
+
+<h3>The &ltsup&gt element</h3>
+<p>This text contains <sup>superscript</sup> text.</p>
+<hr>
+
+<h3>The &ltu&gt element</h3>
+<p>Used to mark up <u>mispeled</u> text.<br>
+The content is typically displayed with an underline.</p>
+<hr>
+
+<h3>The &ltvar&gt element</h3>
+<p>Define some text as variables in a document: <var>a</var> = 1.<br>
+The content inside is typically displayed in italic.</p>
+<hr>
+
+<h3>The &ltwbr&gt element</h3>
+<p>When a word is too long, the browser might break it at the wrong place. You can use the 'wbr' element to specify where in a text it would be ok to add a line-break.<br>
+<p>This is a veryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryvery<wbr>longwordthatwillbreakatspecific<wbr>placeswhenthebrowserwindowisresized.</p>
+<hr>
+
+<h2>HTML tags/elements for scripts</h2>
+
+<h3>The &ltcanvas&gt, &ltscript&gt and &ltnoscript&gt elements</h3>
+<canvas id="myCanvas" width="200" height="200">Your browser does not support the canvas tag.</canvas>
+<script>
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+ctx.fillStyle = "#FF0000";
+ctx.fillRect(0, 0, 300, 300);
+ctx.font = "14px Arial";
+ctx.strokeText("Draw graphics via JavaScript", 10, 50);
+</script>
+<!--A browser with JavaScript disabled will show the text inside the noscript element-->
+<noscript>Sorry, your browser does not support JavaScript!</noscript>
+<hr>
+
+<h3>The &lttemplate&gt element</h3>
+<p>Used as a container to hold some HTML content hidden from the user when the page loads<br>
+The content inside 'template' can be rendered later with a JavaScript</p>
+<button onclick="showContent()">Show hidden content</button>
+<template>
+  <h2>Hidden Content</h2>
+  <img src="pozne/fef_logo.jpg" width="150" height="150">
+</template>
+<script>
+function showContent() {
+  var temp = document.getElementsByTagName("template")[0];
+  var clon = temp.content.cloneNode(true);
+  document.body.appendChild(clon);
+}
+</script>
+<hr>
+
+<h2>HTML tags/elements for sections</h2>
+<h3>The &ltarticle&gt, &ltheader&gt, &ltfooter&gt, &ltmain&gt and &ltaside&gt elements</h3>
+<main>
+<article>
+ <header>
+    <p>Posted: 1st of September</p>
+ </header>
+ <p><b>Article</b><br>
+  The 'article' element should make sense on its own and it should be possible to distribute it independently from the rest of the site.<br> This element does not render as anything special in a browser</p>
+<footer>
+  <p>Author: robinetu</p>
+</footer>
+</article>
+<aside>
+  <p><b>Aside</b><br>
+  The 'aside' element display some content aside from the content it is placed in.<br> This element does not render as anything special in a browser</p>
+</aside>
+</main>
+<hr>
+
+<h3>The &ltdiv&gt element</h3>
+<div class="myDiv">
+  <h4>This is a heading in a div element, a container which is then styled with CSS or manipulated with JavaScript</h4>
+  <p>This is some text in a div element, a container which is then styled with CSS or manipulated with JavaScript</p>
+</div>
+<p>This is some text outside the div element.</p>
+<hr>
+
+<h3>The &ltsection&gt element</h3>
+<section>
+  <h4>Section1</h4>
+  <p>Defines a section in a document</p>
+</section>
+<section>
+  <h4>Section2</h4>
+  <p>Defines another section in a document</p>
+</section>
+<hr>
+
+<h3>The &ltspan&gt element</h3>
+<p>An inline container used to <span style="color:green">mark up</span> a part of a text</p>
+<p>Is much like the 'div' element, but 'div' is a <span style="color:yellow">block-level</span> element and 'span' is an <span style="color:red">inline</span> element</p>
+<hr>
+
+<h2>HTML tags/elements for tables</h2>
+
+<h3>The &lttable&gt, &ltcaption&gt, &ltcolgroup&gt, &ltcol&gt, &ltthead&gt, &lttbody&gt, &lttfoot&gt, &lttr&gt, &ltth&gt, &lttd&gt elements</h3>
+<table border="1">
+  <caption>Caption, a brief explanation</caption>
+    <colgroup>
+		<col span="2" style="background-color:red">
+		<col style="background-color:green">
+	</colgroup>
+  <thead>
+    <tr>
+      <th>Month</th>
+      <th>Savings</th>
+	  <th>RON</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>January</td>
+      <td>$100</td>
+	  <td>400</td>		
+	</tr>
+    <tr>
+      <td>February</td>
+      <td>$80</td>
+	  <td>320</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+		<td colspan="3">Sum: $180 (720 ron)</td>
+      
+    </tr>
+  </tfoot>
+</table>
+<hr>
+
+</body>
+</html>
